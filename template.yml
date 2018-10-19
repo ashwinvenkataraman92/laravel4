@@ -110,7 +110,10 @@ Resources:
             Action:
             - 's3:GetObject'
             - 's3:ListObjects'
-            Resource: '*'
+            Resource:
+            - 'arn:aws:s3:::aws-codestar-us-east-1-374816385780/laravel4/ssh/*'
+            - 'arn:aws:s3:::awscodestar-remote-access-signatures-us-east-1/*'
+            - 'arn:aws:s3:::awscodestar-remote-access-us-east-1/*'
   EBInstanceProfile:
     Description: Creating Amazon EC2 instance profile for AWS Elastic Beanstalk
     Type: AWS::IAM::InstanceProfile
